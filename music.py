@@ -31,7 +31,7 @@ df_tmp = pd.DataFrame(similarities, columns=df["Song Name"], index=df["Song Name
 
 # Streamlit app
 def main():
-    st.title("Song Recommendation System")
+    st.title("music Recommendation System")
 
     st.write("Enter the name of a song to get recommendations:")
 
