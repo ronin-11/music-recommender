@@ -36,7 +36,7 @@ df_tmp = pd.DataFrame(similarities, columns=df["Song Name"], index=df["Song Name
 def main():
     st.title("Music Recommendation System")
 
-    st.write("Enter the name of a song in lower_case to get recommendations:")
+    st.write("Enter the name of a song in lowercase to get recommendations:")
 
     input_song = st.text_input("Song Name", "")
 
@@ -48,7 +48,8 @@ def main():
             recommendation.remove(input_song)  # Remove the input song from recommendations
             st.write("You should check out these songs:")
             for song in recommendation:
-                st.write(song)
+                artist_name = df.loc[df['Song Name'].str.lower() == song]['Artist Name'].iloc[0]
+                st.write(f"{song} by {artist_name}")
         else:
             st.write("Sorry, there is no song name in our database. Please try another one.")
 
