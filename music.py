@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Read the data
-df = pd.read_csv("C:\\Users\\ABEL\\Desktop\\music recommender\\Spotify_final_dataset.csv", low_memory=False)[:1000]
+df = pd.read_csv("Spotify_final_dataset.csv", low_memory=False)[:1000]
 
 # Preprocess the song names to lowercase
 df['Song Name'] = df['Song Name'].str.lower()
